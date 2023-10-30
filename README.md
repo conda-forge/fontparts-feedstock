@@ -1,11 +1,11 @@
-About fontparts
-===============
+About fontparts-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fontparts-feedstock/blob/main/LICENSE.txt)
 
 Home: http://github.com/robotools/fontParts
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fontparts-feedstock/blob/main/LICENSE.txt)
 
 Summary: An API for interacting with the parts of fonts during the font development process.
 
