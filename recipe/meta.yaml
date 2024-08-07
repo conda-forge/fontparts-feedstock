@@ -1,13 +1,13 @@
 {% set name = "fontparts" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fontParts-{{ version }}.zip
-  sha256: 79e535dd2d48702f9bb222b7603953e2b5437970c6731c75c18fe2b3cb79a420
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  sha256: 778d595493a208f2134638066a30598762619d5df8e723d30a24c4189ccfa10d
 
 build:
   noarch: python
