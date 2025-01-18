@@ -19,6 +19,7 @@ requirements:
     - pip
     - python {{ python_min }}
     - setuptools-scm ==7.0.5
+    - setuptools
   run:
     - booleanoperations >=0.9.0
     - defcon >=0.6.0
