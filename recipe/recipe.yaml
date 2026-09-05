@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: fontparts
+  version: "1.1.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 7ceed66dc176c05f2274e9d09b401b124ce00c46e758e4fecb7f5f19f3d34c61
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools-scm
+    - setuptools
+  run:
+    - booleanoperations >=0.9.0
+    - defcon >=0.6.0
+    - fontmath >=0.4.8
+    - fonttools >=3.32.0
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - fontParts
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  summary: An API for interacting with the parts of fonts during the font development process.
+  license: MIT
+  license_file: LICENSE
+  homepage: http://github.com/robotools/fontParts
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
